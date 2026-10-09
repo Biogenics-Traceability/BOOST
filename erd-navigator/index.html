@@ -783,14 +783,19 @@
         async function discoverSchemaDirectories() {
             try {
                 const schemaBasePath = getSchemaBasePath();
-                // Try manifest file first (recommended approach)
-                const manifestResponse = await fetch(`${schemaBasePath}/directories.json`);
-                if (manifestResponse.ok) {
-                    const manifest = await manifestResponse.json();
-                    console.log(`Loaded ${manifest.total_entities} schema directories from manifest (updated: ${manifest.last_updated})`);
-                    return manifest.schema_directories;
+                // Try manifest file first (recommended approach). Failing to read the
+                // manifest is not fatal on its own - fall through to directory discovery.
+                try {
+                    const manifestResponse = await fetchWithRetry(`${schemaBasePath}/directories.json`);
+                    if (manifestResponse.ok) {
+                        const manifest = await manifestResponse.json();
+                        console.log(`Loaded ${manifest.total_entities} schema directories from manifest (updated: ${manifest.last_updated})`);
+                        return manifest.schema_directories;
+                    }
+                } catch (manifestError) {
+                    console.warn('Manifest fetch failed:', manifestError);
                 }
-                
+
                 console.warn('Manifest file not found, falling back to directory discovery');
                 
                 // Fallback to raw directory listing (local development)
@@ -820,11 +825,39 @@
         }
 
         // Schema loading functions
+
+        // Loading the ERD costs one uncached request per entity, so a single transient
+        // failure (network blip, 5xx, proxy hiccup) used to abort the whole render.
+        // Retry those with backoff; a 404 is a real missing file, so return it as-is.
+        async function fetchWithRetry(url, { attempts = 3, baseDelayMs = 250 } = {}) {
+            let lastError = null;
+
+            for (let attempt = 1; attempt <= attempts; attempt++) {
+                try {
+                    const response = await fetch(url);
+                    if (response.ok || response.status === 404) {
+                        return response;
+                    }
+                    lastError = new Error(`HTTP ${response.status}`);
+                } catch (error) {
+                    lastError = error;
+                }
+
+                if (attempt < attempts) {
+                    const delay = baseDelayMs * Math.pow(2, attempt - 1);
+                    console.warn(`Retrying ${url} in ${delay}ms (attempt ${attempt}/${attempts}): ${lastError.message}`);
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+
+            throw lastError;
+        }
+
         async function loadSchemaFile(entityName) {
             try {
                 const schemaBasePath = getSchemaBasePath();
                 const schemaPath = `${schemaBasePath}/${entityName.replace(/([A-Z]+)([A-Z][a-z])/g, '$1_$2').replace(/([a-z])([A-Z])/g, '$1_$2').toLowerCase()}/validation_schema.json?cb=${Date.now()}`;
-                const response = await fetch(schemaPath);
+                const response = await fetchWithRetry(schemaPath);
                 if (!response.ok) {
                     console.warn(`Could not load schema for ${entityName}: ${response.status}`);
                     return null;
@@ -838,7 +871,7 @@
 
         async function loadERDConfig() {
             try {
-                const response = await fetch('./erd-config.json');
+                const response = await fetchWithRetry('./erd-config.json');
                 if (!response.ok) {
                     throw new Error(`Failed to load ERD config: ${response.status}`);
                 }
@@ -1029,6 +1062,26 @@
         // Dynamic layout engine removed - using config-only positioning
 
 
+        // Non-fatal banner for a partially loaded diagram - the ERD still renders.
+        function showPartialLoadWarning(failedEntities, totalCount) {
+            const header = document.querySelector('.header');
+            if (!header) return;
+
+            const loadedCount = totalCount - failedEntities.length;
+            const details = failedEntities
+                .map(f => `<li><strong>${f.name}</strong> — ${f.reason}</li>`)
+                .join('');
+
+            const banner = document.createElement('div');
+            banner.style.cssText = 'background: #FEF3C7; border: 1px solid #F59E0B; border-radius: 6px; padding: 12px 16px; margin: 15px 0; font-size: 14px; color: #78350F;';
+            banner.innerHTML = `
+                <strong>⚠️ Partial diagram:</strong> ${loadedCount} of ${totalCount} entities loaded.
+                <ul style="margin: 8px 0 0 0; padding-left: 20px;">${details}</ul>
+                <p style="margin: 8px 0 0 0;">This is usually a transient network error — reloading the page normally fixes it.</p>
+            `;
+            header.insertAdjacentElement('afterend', banner);
+        }
+
         // Load entities from schema files with auto-discovery
         async function loadEntitiesFromSchema() {
             console.log('Starting schema-based entity loading...');
@@ -1063,17 +1116,21 @@
                 throw new Error('Schema directories not found');
             }
             
+            // Collect per-entity failures rather than aborting on the first one. One bad
+            // entity should degrade the diagram, not blank it.
+            const failedEntities = [];
+
             for (const directory of directories) {
                 const entityName = directoryToEntityName(directory);
                 const schema = await loadSchemaFile(entityName);
-                
+
                 if (schema) {
                     console.log(`Processing entity: ${entityName}`);
                     const metadata = extractMetadataFromSchema(entityName, schema, erdConfig);
-                    
+
                     if (metadata) {
                         console.log(`✅ ${entityName} loaded successfully in area: ${metadata.area}`);
-                        
+
                         const entity = convertSchemaToEntity(entityName, schema, metadata.area, metadata.description, metadata.position);
                         if (entity) {
                             entities.push(entity);
@@ -1081,14 +1138,19 @@
                         }
                     } else {
                         console.error(`FAILED to process ${entityName} - check ERD configuration`);
-                        throw new Error(`Entity ${entityName} not properly configured`);
+                        failedEntities.push({ name: entityName, reason: 'not assigned to an area in erd-config.json' });
                     }
                 } else {
                     console.error(`FAILED to load schema for ${entityName} from directory ${directory}`);
-                    throw new Error(`Schema not found for ${entityName}`);
+                    failedEntities.push({ name: entityName, reason: `could not load ${directory}/validation_schema.json` });
                 }
             }
-            
+
+            if (failedEntities.length > 0) {
+                console.error(`${failedEntities.length} of ${directories.length} entities failed to load:`, failedEntities);
+                showPartialLoadWarning(failedEntities, directories.length);
+            }
+
             // Generate relationships from schema metadata (NO pattern matching)
             const metadataRelationships = generateMetadataRelationships(entities);
             console.log(`Generated ${metadataRelationships.length} relationships from schema metadata`);
@@ -2648,7 +2710,7 @@
                 
                 console.log(`Total relationships available: ${relationships.length}`);
                 
-                // No fallback - if schema loading fails, show error
+                // A partial load renders with a warning banner; only a total failure is fatal.
                 if (entities.length === 0) {
                     throw new Error('No entities loaded from schemas - check configuration and schema files');
                 }
