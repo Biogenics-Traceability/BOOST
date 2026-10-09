@@ -10,6 +10,7 @@
     "accuracy": "https://github.com/Biogenics-Traceability/BOOST/schemas#accuracy",
     "elevationM": "https://github.com/Biogenics-Traceability/BOOST/schemas#elevationM",
     "administrativeRegion": "https://github.com/Biogenics-Traceability/BOOST/schemas#administrativeRegion",
+    "plotIdentifiers": "https://github.com/Biogenics-Traceability/BOOST/schemas#plotIdentifiers",
     "accessRestrictions": "https://github.com/Biogenics-Traceability/BOOST/schemas#accessRestrictions",
     "id": "@id"
   },
@@ -57,5 +58,9 @@
   "accuracy": 2.5,
   "elevationM": 1280.5,
   "administrativeRegion": "Humboldt County, California, USA",
+  "plotIdentifiers": [
+    {"scheme": "forest_management_unit", "value": "KR-UNIT-4", "registry": "Klamath Ridge forest management plan"},
+    {"scheme": "national_cadastre", "value": "APN 220-031-004", "registry": "Humboldt County Assessor"}
+  ],
   "accessRestrictions": "Seasonal road closure November 15 - April 1. Permit required for public access."
 }

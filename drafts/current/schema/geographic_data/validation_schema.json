@@ -93,6 +93,31 @@
       "accessRestrictions": {
         "type": "string",
         "description": "Any access restrictions or special conditions"
+      },
+      "plotIdentifiers": {
+        "type": "array",
+        "description": "Identifiers under which this area is known to an external registry: an open plot identifier (FAO GeoID), a national cadastral or land-registry reference, a forest management unit code, or the area named in a harvest permit. Lets a harvest polygon carry the identifier that regulators and registries resolve, alongside its geometry.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "scheme": {
+              "type": "string",
+              "enum": ["fao_geoid", "national_cadastre", "forest_management_unit", "permit_area", "other"],
+              "description": "Identifier scheme"
+            },
+            "value": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Identifier value as issued"
+            },
+            "registry": {
+              "type": "string",
+              "description": "Name or URI of the registry that resolves the identifier (e.g., FAO AgStack asset registry; a national cadastre)"
+            }
+          },
+          "required": ["scheme", "value"],
+          "additionalProperties": false
+        }
       }
     },
     "required": [

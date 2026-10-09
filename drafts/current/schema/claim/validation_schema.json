@@ -28,6 +28,7 @@
       },
       "claimType": {
         "type": "string",
+        "description": "Type of sustainability or chain-of-custody claim carried by the traceable unit. Scheme claim forms follow the scheme's own transaction-claim vocabulary (FSC-STD-40-004 for FSC; PEFC ST 2002 for PEFC; SFI Section 3 and 4 for SFI). 'PEFC' is retained for compatibility and is equivalent to 'PEFC Certified'.",
         "enum": [
           "SBP-compliant",
           "FSC Mix",
@@ -37,7 +38,21 @@
           "FSC 100%",
           "FSC Recycled",
           "ISCC EU",
-          "RED II"
+          "RED II",
+          "FSC Controlled Wood",
+          "PEFC Certified",
+          "PEFC Controlled Sources",
+          "SFI Certified Sourcing",
+          "SFI Chain of Custody"
+        ]
+      },
+      "controlSystem": {
+        "type": "string",
+        "description": "Chain-of-custody control method under which the claim was produced at the issuing site: physical separation with claim transfer (transfer), percentage-based, or credit-based accounting (FSC-STD-40-004 section 9 to 11; PEFC ST 2002 section 7). Records which method produced the claim so that a credit-system claim is not read as a statement of physical origin.",
+        "enum": [
+          "transfer",
+          "percentage",
+          "credit"
         ]
       },
       "CertificationSchemeId": {
