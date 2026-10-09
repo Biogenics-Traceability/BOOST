@@ -7,9 +7,12 @@ import re
 import sys
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[2]
+SCHEMA_DIR = ROOT / "drafts" / "current" / "schema"
+
 def validate_schemas():
     """Run comprehensive schema validation"""
-    schema_dir = Path('schema')
+    schema_dir = SCHEMA_DIR
     errors = []
     warnings = []
     
@@ -29,7 +32,13 @@ def validate_schemas():
                 
         except Exception as e:
             errors.append(f'Error loading {schema_file}: {e}')
-    
+
+    if not entities:
+        print(f'❌ No entity schemas found under {schema_dir}')
+        for error in errors:
+            print(f'  - {error}')
+        return False
+
     print(f'✅ Loaded and validated {len(entities)} entity schemas')
     
     # Additional production validations - All entity patterns
