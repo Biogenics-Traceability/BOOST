@@ -11,10 +11,10 @@
     "id": "@id"
   },
   "@type": "TrackingPoint",
-  "@id": "https://github.com/Biogenics-Traceability/BOOST/schemas/tracking-point/TP-MILL-ENTRANCE-Pacific-001",
+  "@id": "https://github.com/Biogenics-Traceability/BOOST/schemas/tracking-point/TP-MILL-ENTRANCE-PACIFIC-001",
   "trackingPointId": "TP-MILL-001",
   "pointType": "mill_entrance",
-  "geographicDataId": "GEO-MILL-ENTRANCE-Pacific-001",
+  "geographicDataId": "GEO-MILL-ENTRANCE-PACIFIC-001",
   "equipmentUsed": "RFID_reader, scale_system, optical_scanner, GPS",
   "operatorId": "OP-MILL-GATE-PACIFIC-001",
   "establishedTimestamp": "2025-06-01T08:00:00Z",

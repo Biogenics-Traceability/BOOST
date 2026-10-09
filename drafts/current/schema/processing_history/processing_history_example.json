@@ -26,15 +26,19 @@
     "id": "@id"
   },
   "@type": "ProcessingHistory",
-  "@id": "https://github.com/Biogenics-Traceability/BOOST/schemas/processing-history/PROC-HIST-TRU-LOG-CA-042-002",
-  "processingHistoryId": "PROC-HIST-TRU-LOG-CA-042-002",
-  "traceableUnitId": "TRU-LOG-CA-Klamath-042",
-  "materialProcessingId": "PROC-CROSSCUT-KLA-042-015",
+  "@id": "https://github.com/Biogenics-Traceability/BOOST/schemas/processing-history/PH-TRU-LOG-CA-042-002",
+  "processingHistoryId": "PH-TRU-LOG-CA-042-002",
+  "traceableUnitId": "TRU-LOG-CA-KLAMATH-042",
+  "materialProcessingId": "MP-CROSSCUT-KLA-042-015",
   "timestamp": "2025-07-15T08:45:00Z",
   "processSequenceNumber": 2,
   "processingEventType": "transformation",
-  "inputTRUIds": ["TRU-TREE-CA-Klamath-042"],
-  "outputTRUIds": ["TRU-LOG-CA-Klamath-042"],
+  "inputTRUIds": [
+    "TRU-TREE-CA-KLAMATH-042"
+  ],
+  "outputTRUIds": [
+    "TRU-LOG-CA-KLAMATH-042"
+  ],
   "processingDuration": "PT45M",
   "qualityChangeDescription": "Log crosscutting optimized lengths for Grade A sawlog recovery. Improved merchantability through precision cutting.",
   "operatorId": "OP-HARVESTER-KLAMATH-001",
@@ -43,9 +47,11 @@
   "speciesCompositionChange": "unchanged",
   "plantPartTransformation": "trunk→trunk (optimized lengths: 8m, 8m, 6m)",
   "isCurrentProcessingState": false,
-  "processingGeographicDataId": "GEO-HARVEST-SITE-CA-Klamath-Ridge-04",
-  "previousProcessingHistoryId": "PROC-HIST-TRU-LOG-CA-042-001",
-  "nextProcessingHistoryIds": ["PROC-HIST-TRU-LOG-CA-042-003"],
+  "processingGeographicDataId": "GEO-HARVEST-SITE-CA-KLAMATH-RIDGE-04",
+  "previousProcessingHistoryId": "PH-TRU-LOG-CA-042-001",
+  "nextProcessingHistoryIds": [
+    "PH-TRU-LOG-CA-042-003"
+  ],
   "volumeConservationData": {
     "totalInputVolume": 25.5,
     "totalOutputVolume": 24.2,
@@ -55,14 +61,15 @@
   },
   "mediaBreakData": {
     "mediaBreakOccurred": false,
-    "breakDuration": null,
-    "breakReason": null,
-    "recoveryMethod": null,
     "dataIntegrityValidated": true
   },
   "claimInheritanceData": {
-    "inheritedClaims": ["CLAIM-FSC-MIX-DF-042"],
-    "newClaims": ["CLAIM-GRADE-A-SAWLOG-042"],
+    "inheritedClaims": [
+      "CLA-FSC-MIX-DF-042"
+    ],
+    "newClaims": [
+      "CLA-GRADE-A-SAWLOG-042"
+    ],
     "claimValidationRequired": true,
     "claimValidationCompleted": true
   }

@@ -4,6 +4,9 @@ All notable changes to the BOOST specification are documented in this file.
 
 ## [Unreleased]
 
+### Fixed
+- **Example instances validate against their schemas**: 17 of the 36 entity example files failed strict validation on `main`. Fixed identifier prefixes and case to match the schema patterns (`CLA-`, `PH-`, `MP-`, `MR-`, `TB-`, `DOC-`; upper-case identifiers), renamed the Claim example's foreign-key fields to the schema's `TraceableUnitId` / `CertificationSchemeId`, replaced free-text `qualityGrade` values with enum values, replaced `measurementMethod` `mill` with `mill_scale`, removed `null` values from typed fields, and rewrote six example files that were not instances at all (CertificationBody was a copy of its schema; EnergyCarbonData, MassBalanceAccount, SupplyBaseReport, VerificationStatement and SalesDeliveryDocument used field sets that predate their schemas). IdentificationMethod's example is now a single instance rather than an array. Added `.github/scripts/validate-examples.py` and a "Validate Example Instances" job to the schema-validation workflow so this cannot regress.
+
 ### Changed
 - **Specification terminology (W3C Community Group naming)**: Renamed "Biomass Open Origin Standard for Tracking" to "Biomass Open Origin Specification for Tracking" to match the W3C group name, and replaced "standard" with "specification" where it describes BOOST itself — spec title and abstract, README, CONTRIBUTING, charter, release workflow names, spec narrative sources and generated outputs, and the Python reference implementation docs. W3C Community Groups publish specifications, not standards. Generic references to external standards (LCFS, FSC, calibration, ISO) are unchanged, as are historical meeting notes and prior changelog entries.
 

@@ -6,14 +6,9 @@
   },
   "@type": "VerificationStatement",
   "@id": "https://boost.example.com/verification/VS-2025-FSC-001",
-  "verificationStatementId": "VS-2025-FSC-001",
-  "verificationBody": "CB-FSC-SMARTWOOD",
+  "statementId": "VS-2025-FSC-001",
   "verificationDate": "2025-06-15",
-  "verificationScope": "Chain of custody verification for biomass feedstock supply",
-  "verificationStandard": "FSC-STD-40-004",
-  "verificationResult": "conformant",
-  "validityPeriod": "P1Y",
-  "expiryDate": "2026-06-15",
-  "statementUrl": "https://certificates.fsc.org/verification/VS-2025-FSC-001.pdf",
-  "lastUpdated": "2025-06-16T09:30:00Z"
+  "issuingBody": "CB-SGS-FOREST-001",
+  "scope": "Chain of custody verification for biomass feedstock supply under FSC-STD-40-004; result conformant; valid to 2026-06-15.",
+  "transactionBatchId": "TB-KLA-042-001"
 }

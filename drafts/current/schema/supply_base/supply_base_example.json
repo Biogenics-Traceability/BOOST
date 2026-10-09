@@ -12,7 +12,11 @@
   "OrganizationId": "ORG-PACIFIC-FOREST-001",
   "totalArea": 125000,
   "areaUnit": "hectares",
-  "primarySpecies": ["Douglas Fir", "Western Hemlock", "Western Red Cedar"],
+  "primarySpecies": [
+    "Douglas Fir",
+    "Western Hemlock",
+    "Western Red Cedar"
+  ],
   "sustainabilityCertification": "FSC-Forest-Management",
   "averageAnnualHarvest": 8500.0,
   "harvestUnit": "cubic_meters",

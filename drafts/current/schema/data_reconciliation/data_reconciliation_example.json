@@ -24,7 +24,7 @@
   "transactionId": "TXN-PACIFIC-MILL-KLA-042",
   "forestMeasurement": 85.25,
   "millMeasurement": 84.75,
-  "discrepancy": 0.50,
+  "discrepancy": 0.5,
   "reconciliationStatus": "resolved",
   "discrepancyReason": "Natural moisture loss during transport - within acceptable range for 3-day transport period",
   "reconciliationDate": "2025-07-21T15:00:00Z",

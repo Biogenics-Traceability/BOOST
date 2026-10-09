@@ -53,7 +53,7 @@
   "operatorId": "OP-MIKE-JOHNSON-001",
   "materialTypeId": "MAT-TYPE-MIXED-SOFTWOOD",
   "productClassification": "sawlog",
-  "qualityGrade": "A",
+  "qualityGrade": "Grade-A",
   "physicalArrangement": {
     "arrangementType": "piled",
     "arrangementDate": "2025-07-15T08:45:00Z",
@@ -78,9 +78,9 @@
     "slope_angle: 25_degrees"
   ],
   "processingHistory": [
-    "PROC-FELL-KLA-001",
-    "PROC-LIMB-KLA-002",
-    "PROC-SORT-KLA-003"
+    "PH-FELL-KLA-001",
+    "PH-LIMB-KLA-002",
+    "PH-SORT-KLA-003"
   ],
   "childTraceableUnitIds": [],
   "currentStatus": "delivered",

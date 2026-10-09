@@ -248,6 +248,27 @@ jobs:
           print(f'\\n✅ {validation_type.title()} validation passed for {len(schema_files)} schemas')
           "
 
+  validate-examples:
+    name: 📄 Validate Example Instances
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    needs: detect-changes
+    if: needs.detect-changes.outputs.schema-changed == 'true' || github.event_name == 'workflow_dispatch'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install jsonschema
+
+      - name: Validate every example against its entity schema
+        run: python3 .github/scripts/validate-examples.py
+
   validate-foreign-keys:
     name: 🔗 Validate Foreign Key Relationships
     runs-on: ubuntu-latest
@@ -508,7 +529,7 @@ jobs:
     name: 📋 Validation Summary
     runs-on: ubuntu-latest
     timeout-minutes: 5  # Summary generation should be very quick
-    needs: [validate-schemas, validate-foreign-keys, validate-python-models]
+    needs: [validate-schemas, validate-examples, validate-foreign-keys, validate-python-models]
     if: always() && (needs.detect-changes.outputs.schema-changed == 'true' || github.event_name == 'workflow_dispatch')
     
     steps:
