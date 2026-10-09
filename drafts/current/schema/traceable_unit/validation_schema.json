@@ -66,8 +66,16 @@
                 "barcode",
                 "biometric",
                 "manual_id",
-                "photo_documentation"
-              ]
+                "photo_documentation",
+                "dispatch_note",
+                "lot_number",
+                "bundle",
+                "container",
+                "sscc",
+                "production_order",
+                "gtin"
+              ],
+              "description": "Identifier type. Physical tag types (trip_ticket to photo_documentation) identify the unit in the field; document and logistics types (dispatch_note, lot_number, bundle, container, sscc, production_order, gtin) carry the identifiers under which the same unit appears on transport, customs and production records, so inputs and outputs can be linked across transformations."
             },
             "identifierValue": {
               "type": "string"
@@ -95,6 +103,11 @@
         "type": "number",
         "minimum": 0,
         "description": "Total volume of the traceable unit in cubic meters"
+      },
+      "volumeBasis": {
+        "type": "string",
+        "enum": ["solid_under_bark", "solid_over_bark", "stacked", "green_weight", "dry_weight", "bone_dry"],
+        "description": "Basis on which totalVolumeM3 (or the unit's mass) was measured: solid volume under or over bark, stacked (stere or cord) volume, or a weight basis. Volumes of the same material differ by basis; recording it makes quantities comparable across events and transformations."
       },
       "currentGeographicDataId": {
         "type": "string",

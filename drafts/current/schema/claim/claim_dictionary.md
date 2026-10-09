@@ -36,8 +36,8 @@ The `Claim` entity enables species-specific sustainability claims with TRU refer
 <td>`claimType`
 <td>string
 <td>Yes
-<td>Type of sustainability claim (enum)
-<td>`FSC Mix`, `SBP-compliant`, `PEFC`, `organic`
+<td>Type of sustainability or chain-of-custody claim (enum; scheme transaction-claim forms incl. FSC Controlled Wood, PEFC Certified / Controlled Sources, SFI Certified Sourcing / Chain of Custody)
+<td>`FSC Mix`, `FSC Controlled Wood`, `PEFC Certified`, `SFI Certified Sourcing`
 </tr>
 <tr>
 <td>`certificationSchemeId`
@@ -131,6 +131,13 @@ The `Claim` entity enables species-specific sustainability claims with TRU refer
 <td>`2025-07-21T15:45:00Z`
 </tr>
 </tbody>
+<tr>
+<td>`controlSystem`
+<td>string
+<td>No
+<td>Chain-of-custody control method that produced the claim at the issuing site (enum: transfer, percentage, credit)
+<td>`credit`, `transfer`
+</tr>
 </table>
 ### Claim Types
 

@@ -31,6 +31,11 @@
         "type": "number",
         "minimum": 0
       },
+      "volumeBasis": {
+        "type": "string",
+        "enum": ["solid_under_bark", "solid_over_bark", "stacked", "green_weight", "dry_weight", "bone_dry"],
+        "description": "Basis on which measuredVolume was taken: solid volume under or over bark, stacked (stere or cord) volume, or a weight basis"
+      },
       "measuredLength": {
         "type": "number",
         "minimum": 0

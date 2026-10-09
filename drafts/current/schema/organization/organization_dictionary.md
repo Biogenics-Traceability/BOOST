@@ -110,6 +110,13 @@ The `Organization` entity manages companies and institutions with geographic dat
 <td>`2025-07-21T15:45:00Z`
 </tr>
 </tbody>
+<tr>
+<td>`identifiers`
+<td>array
+<td>No
+<td>Registry identifiers for the legal entity: objects with scheme (lei, gln, national_registration, tax_id, duns, eori, other), value, issuingAuthority, country (ISO 3166-1 alpha-2)
+<td>`[{"scheme": "lei", "value": "5493001KJTIIGC8Y1R12"}]`
+</tr>
 </table>
 ### Organization Types
 

@@ -43,7 +43,7 @@ The `MaterialProcessing` entity tracks all technical manipulations with input/ou
 <td>`processType`
 <td>string
 <td>Yes
-<td>Type of processing operation (enum)
+<td>Type of processing operation (enum); wood-products operations: sawing, peeling, kiln_drying, heat_treatment, manufacturing
 <td>`felling`, `delimbing`, `crosscutting`, `chipping`, `debarking`, `assortment`
 </tr>
 <tr>
@@ -166,6 +166,20 @@ The `MaterialProcessing` entity tracks all technical manipulations with input/ou
 <td>`2025-07-21T15:45:00Z`
 </tr>
 </tbody>
+<tr>
+<td>`conversionFactor`
+<td>number
+<td>No
+<td>Ratio of output to input quantity applied by the step (yield or recovery factor), > 0
+<td>`0.43`, `0.95`
+</tr>
+<tr>
+<td>`conversionBasis`
+<td>string
+<td>No
+<td>Basis of the quantities the conversion factor relates
+<td>`m3 solid under bark log input to m3 sawn output`
+</tr>
 </table>
 ### Processing Types
 
