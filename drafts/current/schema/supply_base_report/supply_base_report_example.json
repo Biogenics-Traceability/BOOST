@@ -6,17 +6,15 @@
   },
   "@type": "SupplyBaseReport",
   "@id": "https://boost.example.com/report/SBR-2024-PACIFIC-NORTHWEST",
-  "supplyBaseReportId": "SBR-2024-PACIFIC-NORTHWEST",
-  "supplyBaseId": "SB-PACIFIC-NORTHWEST", 
+  "sbrId": "SBR-2024-PACIFIC-NORTHWEST",
   "organizationId": "ORG-PACIFIC-FOREST-001",
-  "reportingYear": 2024,
-  "reportType": "annual_sustainability",
-  "publicationDate": "2025-03-31",
-  "totalBiomassHarvested": 8245.5,
-  "biomassUnit": "cubic_meters",
-  "sustainablePercentage": 98.2,
-  "certificationCompliance": true,
-  "riskMitigationMeasures": ["Biodiversity monitoring", "Soil conservation practices", "Water quality protection"],
-  "reportUrl": "https://reports.pacificforest.com/sustainability/2024/supply-base-report.pdf",
-  "lastUpdated": "2025-03-31T16:45:00Z"
+  "preparationDate": "2025-03-31",
+  "supplyBaseSummary": "Annual supply base report for 2024 covering 8,245.5 m3 of biomass harvested from certified and controlled sources in the Pacific Northwest supply base.",
+  "sourcingPractices": "Sourcing from FSC-certified forest management units and SBP-evaluated supply base areas; low-risk designation maintained for all sourcing regions.",
+  "sustainabilityMeasures": "Biodiversity monitoring, soil conservation practices, water quality protection, 98.2 percent sustainable sourcing.",
+  "publicationUrl": "https://reports.pacificforest.example.com/sustainability/2024/supply-base-report.pdf",
+  "reportGeographicDataId": "GEO-SUPPLY-BASE-PACIFIC-NW-001",
+  "supplyBaseIds": [
+    "SB-PACIFIC-NORTHWEST"
+  ]
 }

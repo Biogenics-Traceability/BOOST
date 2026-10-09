@@ -28,22 +28,22 @@
     "id": "@id"
   },
   "@type": "TransactionBatch",
-  "@id": "https://github.com/Biogenics-Traceability/BOOST/schemas/transaction-batch/TXB-KLA-042-001",
-  "transactionBatchId": "TXB-KLA-042-001",
+  "@id": "https://github.com/Biogenics-Traceability/BOOST/schemas/transaction-batch/TB-KLA-042-001",
+  "transactionBatchId": "TB-KLA-042-001",
   "transactionId": "TXN-PACIFIC-KLAMATH-2025-042",
-  "productionBatchId": "PROD-BATCH-KLA-2025-Q3-015",
+  "productionBatchId": "TB-KLA-2025-Q3-015",
   "quantity": 387.5,
   "quantityUnit": "cubic_meters",
   "traceableUnitIds": [
-    "TRU-LOG-CA-Klamath-042-001",
-    "TRU-LOG-CA-Klamath-042-002", 
+    "TRU-LOG-CA-KLAMATH-042-001",
+    "TRU-LOG-CA-KLAMATH-042-002",
     "TRU-PILE-DF-SORTED-043-001",
     "TRU-PILE-PP-SORTED-043-002"
   ],
-  "claimId": "CLAIM-FSC-MIX-MULTISPECIES-042",
+  "claimId": "CLA-FSC-MIX-MULTISPECIES-042",
   "additionalClaimIds": [
-    "CLAIM-SBP-COMPLIANT-042",
-    "CLAIM-LCFS-ELIGIBLE-042"
+    "CLA-SBP-COMPLIANT-042",
+    "CLA-LCFS-ELIGIBLE-042"
   ],
   "speciesComposition": [
     {
@@ -52,24 +52,24 @@
       "volume": 242.2
     },
     {
-      "species": "Ponderosa Pine", 
+      "species": "Ponderosa Pine",
       "percentage": 37.5,
       "volume": 145.3
     }
   ],
-  "qualityGrade": "Grade_A",
+  "qualityGrade": "Grade-A",
   "processingHistoryIds": [
-    "PROC-HIST-TRU-042-001-003",
-    "PROC-HIST-TRU-042-002-002",
-    "PROC-HIST-SPLIT-043-001",
-    "PROC-HIST-LOADING-043-002"
+    "PH-TRU-042-001-003",
+    "PH-TRU-042-002-002",
+    "PH-SPLIT-043-001",
+    "PH-LOADING-043-002"
   ],
   "reconciliationStatus": "resolved",
   "trackingHistory": "Harvest Site → Skid Road → Forest Road → Processing Yard → Loading Bay → Delivery",
   "measurementRecordIds": [
-    "MEAS-HARVEST-042-001",
-    "MEAS-MILL-ENTRANCE-042-001",
-    "MEAS-FINAL-ACCEPTANCE-042-001"
+    "MR-HARVEST-042-001",
+    "MR-MILL-ENTRANCE-042-001",
+    "MR-FINAL-ACCEPTANCE-042-001"
   ],
   "mediaBreakDetected": false,
   "batchStatus": "delivered",

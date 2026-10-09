@@ -38,14 +38,14 @@
     "trunk": {
       "volume": 25.5,
       "percentage": 100.0,
-      "qualityGrade": "Mixed Grade Raw Log"
+      "qualityGrade": "Sawlog"
     }
   },
   "outputPlantParts": {
     "trunk": {
       "volume": 24.2,
       "percentage": 100.0,
-      "qualityGrade": "Grade A: 16.8m³, Grade B: 7.4m³"
+      "qualityGrade": "Grade-A"
     }
   },
   "plantPartTransformations": [

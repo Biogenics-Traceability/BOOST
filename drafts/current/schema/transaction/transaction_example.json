@@ -27,13 +27,12 @@
   "CustomerId": "CUST-PACIFIC-FOREST-PRODUCTS",
   "transactionDate": "2025-07-15",
   "salesDocumentId": "SALES-DOC-KLA-2025-0715-042",
-  "contractValue": 125000.00,
+  "contractValue": 125000.0,
   "contractCurrency": "USD",
   "contractTerms": "FOB",
   "paymentTerms": "Net 30 days from delivery acceptance",
   "transactionStatus": "confirmed",
   "transactionGeographicDataId": "GEO-KLAMATH-HARVEST-REGION-001",
-  "brokerOrganizationId": null,
   "contractSignedDate": "2025-07-12",
   "expectedDeliveryDate": "2025-07-22",
   "complianceRequirements": [
@@ -44,10 +43,10 @@
   "financialTerms": {
     "downPaymentAmount": 0,
     "downPaymentPercentage": 0,
-    "retentionAmount": 2500.00,
+    "retentionAmount": 2500.0,
     "lateFeePercentage": 1.5,
     "discountTerms": "2% discount for payment within 10 days",
-    "creditLimit": 150000.00,
+    "creditLimit": 150000.0,
     "collateralRequired": false
   },
   "riskManagement": {

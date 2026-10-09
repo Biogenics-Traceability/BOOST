@@ -22,13 +22,13 @@
   },
   "@type": "LCFSReporting",
   "@id": "https://github.com/Biogenics-Traceability/BOOST/schemas/lcfs-reporting/LCFS-RPT-2025-Q1-PACIFIC001",
-  "reportingId": "LCFS-RPT-2025-Q1-PACIFIC001",
-  "regulatedEntityId": "pacific-renewable-fuels-001",
+  "reportingId": "LCFS-RPT-2025-Q1-PACIFIC1",
+  "regulatedEntityId": "ORG-PACIFIC-RENEWABLE-FUELS-001",
   "reportingPeriod": "2025-Q1",
   "totalFuelVolume": 5075000.0,
-  "totalCreditsGenerated": 54580477.10,
+  "totalCreditsGenerated": 54580477.1,
   "totalDeficitsIncurred": 0.0,
-  "netPosition": 54580477.10,
+  "netPosition": 54580477.1,
   "complianceStatus": "compliant",
   "submissionDate": "2025-04-15T10:30:00Z",
   "verificationDate": "2025-04-10T14:00:00Z",
@@ -36,7 +36,7 @@
   "reportingDeadline": "2025-05-15",
   "transactionIds": [
     "TXN-2025-Q1-001",
-    "TXN-2025-Q1-002", 
+    "TXN-2025-Q1-002",
     "TXN-2025-Q1-003",
     "TXN-2025-Q1-004",
     "TXN-2025-Q1-005",
@@ -48,10 +48,10 @@
       "feedstockType": "logging_and_mill_residue",
       "transactionCount": 2,
       "totalVolume": 1650000.0,
-      "creditsGenerated": 17995184.00
+      "creditsGenerated": 17995184.0
     },
     {
-      "pathwayId": "CA-RD-2025-AGR-001", 
+      "pathwayId": "CA-RD-2025-AGR-001",
       "feedstockType": "agricultural_residue",
       "transactionCount": 2,
       "totalVolume": 2350000.0,
@@ -66,10 +66,10 @@
     },
     {
       "pathwayId": "CA-RD-2025-FHR-001",
-      "feedstockType": "forest_harvest_residue", 
+      "feedstockType": "forest_harvest_residue",
       "transactionCount": 1,
       "totalVolume": 425000.0,
-      "creditsGenerated": 4527240.00
+      "creditsGenerated": 4527240.0
     }
   ],
   "calculationParameters": {
@@ -81,9 +81,9 @@
   },
   "complianceMetrics": {
     "creditValue": {
-      "estimatedValue": 109160954.20,
+      "estimatedValue": 109160954.2,
       "valueUnit": "USD",
-      "creditPrice": 2.00,
+      "creditPrice": 2.0,
       "priceUnit": "USD_per_credit"
     },
     "environmentalImpact": {

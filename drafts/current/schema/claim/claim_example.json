@@ -2,9 +2,9 @@
   "@context": {
     "Claim": "https://github.com/Biogenics-Traceability/BOOST/schemas#Claim",
     "claimId": "https://github.com/Biogenics-Traceability/BOOST/schemas#claimId",
-    "traceableUnitId": "https://github.com/Biogenics-Traceability/BOOST/schemas#traceableUnitId",
+    "TraceableUnitId": "https://github.com/Biogenics-Traceability/BOOST/schemas#TraceableUnitId",
     "claimType": "https://github.com/Biogenics-Traceability/BOOST/schemas#claimType",
-    "certificationSchemeId": "https://github.com/Biogenics-Traceability/BOOST/schemas#certificationSchemeId",
+    "CertificationSchemeId": "https://github.com/Biogenics-Traceability/BOOST/schemas#CertificationSchemeId",
     "statement": "https://github.com/Biogenics-Traceability/BOOST/schemas#statement",
     "validated": "https://github.com/Biogenics-Traceability/BOOST/schemas#validated",
     "validatedBy": "https://github.com/Biogenics-Traceability/BOOST/schemas#validatedBy",
@@ -19,11 +19,11 @@
     "id": "@id"
   },
   "@type": "Claim",
-  "@id": "https://github.com/Biogenics-Traceability/BOOST/schemas/claim/CLAIM-FSC-MIX-KLA-042-001",
-  "claimId": "CLAIM-FSC-MIX-KLA-042-001",
-  "traceableUnitId": "TRU-PILE-CA-Klamath-042",
+  "@id": "https://github.com/Biogenics-Traceability/BOOST/schemas/claim/CLA-FSC-MIX-KLA-042-001",
+  "claimId": "CLA-FSC-MIX-KLA-042-001",
+  "TraceableUnitId": "TRU-PILE-CA-KLAMATH-042",
   "claimType": "FSC Mix",
-  "certificationSchemeId": "CERT-FSC-US-WEST-001",
+  "CertificationSchemeId": "CERT-SCHEME-FSC-US-WEST-001",
   "statement": "FSC Mix 70% - Multi-species forest management unit certified under FSC-US Forest Management Standard v1.1",
   "validated": true,
   "validatedBy": "ORG-FSC-CERTIFIER-SGS-001",
@@ -37,9 +37,9 @@
   "evidenceDocumentId": "DOC-FSC-CERT-US-KLAMATH-FMU-2025",
   "claimExpiry": "2030-07-10T23:59:59Z",
   "inheritedFromTRU": [
-    "TRU-LOG-CA-Klamath-042-A",
-    "TRU-LOG-CA-Klamath-042-B",
-    "TRU-LOG-CA-Klamath-042-C"
+    "TRU-LOG-CA-KLAMATH-042-A",
+    "TRU-LOG-CA-KLAMATH-042-B",
+    "TRU-LOG-CA-KLAMATH-042-C"
   ],
   "lastUpdated": "2025-07-21T16:45:00Z"
 }

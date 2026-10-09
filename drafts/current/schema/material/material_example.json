@@ -26,7 +26,7 @@
   "density": "450 kg/m3 (12% moisture content)",
   "applicableProcessingTypes": [
     "felling",
-    "delimbing", 
+    "delimbing",
     "crosscutting",
     "debarking",
     "assortment"
@@ -38,7 +38,7 @@
   "energyContent": "18.5 MJ/kg (dry basis)",
   "applicablePlantParts": [
     "trunk",
-    "heartwood", 
+    "heartwood",
     "sapwood"
   ],
   "excludedPlantParts": [
@@ -49,20 +49,39 @@
   ],
   "plantPartProcessingSpecs": {
     "trunk": {
-      "processingMethods": ["sawing", "veneer"],
-      "qualityGrades": ["Select Structural", "No. 1", "No. 2"],
+      "processingMethods": [
+        "sawing",
+        "veneer"
+      ],
+      "qualityGrades": [
+        "Select Structural",
+        "No. 1",
+        "No. 2"
+      ],
       "moistureRange": "8-19%",
       "energyContent": "18.5 MJ/kg"
     },
     "heartwood": {
-      "processingMethods": ["sawing", "veneer"],
-      "qualityGrades": ["Select Structural", "Premium"],
+      "processingMethods": [
+        "sawing",
+        "veneer"
+      ],
+      "qualityGrades": [
+        "Select Structural",
+        "Premium"
+      ],
       "moistureRange": "8-12%",
       "energyContent": "19.2 MJ/kg"
     },
     "sapwood": {
-      "processingMethods": ["sawing"],
-      "qualityGrades": ["No. 1", "No. 2", "Construction"],
+      "processingMethods": [
+        "sawing"
+      ],
+      "qualityGrades": [
+        "No. 1",
+        "No. 2",
+        "Construction"
+      ],
       "moistureRange": "12-19%",
       "energyContent": "18.0 MJ/kg"
     }

@@ -1,37 +1,49 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/Biogenics-Traceability/BOOST/schemas/certification_body.json",
-  "title": "Certification Body",
-  "type": "object",
-  "properties": {
-    "cbId": { "type": "string" },
-    "cbName": { "type": "string" },
-    "accreditationStatus": { "type": "string" },
-    "accreditationScope": { "type": "string" },
-    "contactInformation": {
-      "type": "object",
-      "properties": {
-        "address": {
-          "type": "object",
-          "properties": {
-            "street": { "type": "string" },
-            "city": { "type": "string" },
-            "state": { "type": "string" },
-            "postalCode": { "type": "string" },
-            "country": { "type": "string" }
-          },
-          "required": ["city", "country"]
-        },
-        "email": { "type": "string", "format": "email" },
-        "phone": { "type": "string" },
-        "website": { "type": "string", "format": "uri" }
-      },
-      "required": ["address"]
-    },
-    "jurisdictions": { "type": "array", "items": { "type": "string" } },
-    "sectorsServed": { "type": "array", "items": { "type": "string" } },
-    "isActive": { "type": "boolean" },
-    "lastUpdated": { "type": "string", "format": "date-time" }
+  "@context": {
+    "@vocab": "https://github.com/Biogenics-Traceability/BOOST/context/",
+    "boost": "https://github.com/Biogenics-Traceability/BOOST/context/",
+    "schema": "https://schema.org/"
   },
-  "required": ["cbId", "cbName", "contactInformation"]
+  "@type": "CertificationBody",
+  "@id": "https://boost.example.com/certification-body/CB-SGS-FOREST-001",
+  "cbId": "CB-SGS-FOREST-001",
+  "cbName": "SGS Forestry Certification Services",
+  "cbType": "third-party",
+  "accreditationStatus": "active",
+  "accreditationBody": "ASI (Assurance Services International)",
+  "authorizedSchemes": [
+    "CERT-SCHEME-FSC-US-WEST-001",
+    "CERT-SCHEME-SBP-001"
+  ],
+  "contactInformation": {
+    "email": "forestry@sgs.example.com",
+    "phone": "+15035550123",
+    "address": {
+      "street": "200 Market Street",
+      "city": "Portland",
+      "state": "OR",
+      "postalCode": "97201",
+      "country": "US"
+    },
+    "website": "https://www.sgs.example.com/forestry"
+  },
+  "operationalRegions": [
+    "US",
+    "CA",
+    "MX"
+  ],
+  "validityPeriod": {
+    "start": "2024-01-01",
+    "end": "2028-12-31"
+  },
+  "specializations": [
+    "forest management",
+    "chain of custody",
+    "controlled wood"
+  ],
+  "performanceMetrics": {
+    "certificatesIssued": 312,
+    "averageAuditDuration": 3.5,
+    "customerSatisfactionScore": 4.6
+  }
 }
