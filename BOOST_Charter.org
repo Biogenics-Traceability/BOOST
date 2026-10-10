@@ -28,11 +28,11 @@ The group will seek participation from a balanced range of stakeholders, includi
 
 * Goals
 
-The mission and goals of this Community Group are to *develop and* *maintain a robust data specification for solid biomass*. to provide a structured framework to enable the systematic collection, management, and exchange of information throughout complex supply chains and processes. The goal is to ensure accurate tracking, transparency, and compliance with sustainability criteria, facilitating the reliable transfer of essential information, including sustainability characteristics and data required for greenhouse gas (GHG) emission calculations, from the source to the end-user. This specification is intended to support the needs of organizations involved in the biomass supply chain, agencies and stakeholders in the biomass economy, and systems like Chain of Custody (CoC) software, referencing concepts from documents like the Netherlands Enterprise Agency, /“Guidance Chain of/ /Custody: Sustainability Criteria for Solid Biomass for Energy/ /Applications.”/ and related standards such as those from Sustainable Biomass Program , International Organization for Standardization, Sustainable Forestry Initiative, the Forest Stewardship Council, and the Roundtable on Sustainable Biomaterials
+The mission and goals of this Community Group are to *develop and* *maintain a robust data specification for forest-derived materials* — spanning woody biomass for energy, sawn timber and engineered wood products, and forest fiber for pulp, paper, and bio-based manufacturing — and for solid biomass for energy from other sources, to provide a structured framework to enable the systematic collection, management, and exchange of information throughout complex supply chains and processes. The goal is to ensure accurate tracking, transparency, and compliance with sustainability criteria, facilitating the reliable transfer of essential information, including sustainability characteristics and data required for greenhouse gas (GHG) emission calculations, from the source to the end-user. This specification is intended to support the needs of organizations involved in the biomass supply chain, agencies and stakeholders in the biomass economy, and systems like Chain of Custody (CoC) software, referencing concepts from documents like the Netherlands Enterprise Agency, /“Guidance Chain of/ /Custody: Sustainability Criteria for Solid Biomass for Energy/ /Applications.”/ and related standards such as those from Sustainable Biomass Program , International Organization for Standardization, Sustainable Forestry Initiative, the Forest Stewardship Council, and the Roundtable on Sustainable Biomaterials
 
 * Scope of Work
 
-The scope of work includes defining a data specification that specifies the format, structure, and relationships of data elements necessary to document and transfer information about solid biomass for energy applications within a Chain of Custody system.
+The scope of work includes defining a data specification that specifies the format, structure, and relationships of data elements necessary to document and transfer information about forest-derived materials — woody biomass for energy, sawn timber and engineered wood products, and forest fiber for pulp, paper, and bio-based manufacturing — and about solid biomass for energy from other sources, within a Chain of Custody system.
 
 The specification shall cover the representation of key entities and their associated information as described in relevant guidance and standards, including:
 
@@ -51,6 +51,8 @@ The specification shall cover the representation of key entities and their assoc
 - The specification should consider how to represent the flow of information between suppliers and recipients and the use of documentation like   sales/delivery documents.
 - Consideration of alignment or interoperability requirements with   existing data transfer systems, such as the SBP Data Transfer System  (DTS).
 
+The entity examples above derive from the original solid-biomass-for-energy guidance. For timber, engineered wood products, and forest fiber within the extended scope, the specification shall cover the analogous entities — including provenance and harvest origin, species and material attributes, transformation and processing events, and the certification claims and chain-of-custody documentation that apply to wood products (such as FSC and PEFC Chain of Custody) — with the specific entity set and its alignment to commodity-agnostic traceability frameworks determined by the group through the Decision Process.
+
 The specification should be defined in a technical format suitable for software system implementation, potentially including supporting documentation.
 
 * Out of Scope
@@ -66,7 +68,7 @@ Topics known in advance to be out of scope include:
 * Deliverables
 
 ** Specifications
-The primary deliverable will be a *Biomass Data Standard* *specification*. This specification will define the structure, format, and relationships of data elements for solid biomass chain of custody information exchange. The output format (e.g., JSON Schema, XML Schema, OWL/RDF) will be determined by the group. An estimated schedule for key deliverables (e.g., first draft, candidate recommendation) will be developed by the group.
+The primary deliverable will be the *BOOST specification*. This specification will define the structure, format, and relationships of data elements for chain of custody information exchange on forest-derived materials and solid biomass for energy. The output format (e.g., JSON Schema, XML Schema, OWL/RDF) will be determined by the group. An estimated schedule for key deliverables (e.g., first draft, Final Community Group Report) will be developed by the group.
 
 ** Non-Normative Reports
 
@@ -108,7 +110,7 @@ This group will seek to make decisions where there is consensus. No single organ
 
 ** Initial Proposal Phase
 
-- Any member can submit a proposal for a new standard or modification
+- Any member can submit a proposal for a new specification or modification
 - Proposals must include technical specifications, rationale, and implementation considerations
 - A discussion period of 1-2 weeks follows each proposal
 
