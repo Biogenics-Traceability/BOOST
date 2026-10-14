@@ -43,8 +43,14 @@
           "pelletizing",
           "transport",
           "drying",
-          "sizing"
-        ]
+          "sizing",
+          "sawing",
+          "peeling",
+          "kiln_drying",
+          "heat_treatment",
+          "manufacturing"
+        ],
+        "description": "Type of processing operation. Biomass operations (felling to sizing) plus primary and secondary wood-products operations: sawing (sawn timber), peeling (veneer), kiln_drying, heat_treatment (ISPM 15 or equivalent), manufacturing (articles, panels, converting)."
       },
       "processTimestamp": {
         "type": "string",
@@ -75,6 +81,15 @@
       "volumeLoss": {
         "type": "number",
         "minimum": 0
+      },
+      "conversionFactor": {
+        "type": "number",
+        "exclusiveMinimum": 0,
+        "description": "Ratio of output quantity to input quantity applied by this processing step (yield or recovery factor), e.g. 0.43 for sawn output per cubic metre of log input. Stated so that the quantity relationship between inputs and outputs is explicit rather than inferred from inputVolume and outputVolume."
+      },
+      "conversionBasis": {
+        "type": "string",
+        "description": "Basis of the input and output quantities the conversion factor relates (e.g., 'm3 solid under bark log input to m3 sawn output'; 'green tonnes to bone-dry tonnes')"
       },
       "qualityMetrics": {
         "type": "string"

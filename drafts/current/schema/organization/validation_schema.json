@@ -88,6 +88,38 @@
       "description": "Tax identification number",
       "examples": ["12-3456789", "98-7654321"]
     },
+    "identifiers": {
+      "type": "array",
+      "description": "Registry identifiers for the legal entity, one per scheme (Legal Entity Identifier, GS1 Global Location Number, national company registration number, tax number, DUNS, EU EORI). Lets every party reference resolve to one canonical record and to the identifier a regulator or registry recognises (external system references).",
+      "boost_external_reference": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "scheme": {
+            "type": "string",
+            "enum": ["lei", "gln", "national_registration", "tax_id", "duns", "eori", "other"],
+            "description": "Identifier scheme"
+          },
+          "value": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Identifier value as issued by the scheme"
+          },
+          "issuingAuthority": {
+            "type": "string",
+            "description": "Registry or authority that issued the identifier (e.g., GLEIF, GS1, a national companies registry)"
+          },
+          "country": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$",
+            "description": "ISO 3166-1 alpha-2 country of the issuing registry"
+          }
+        },
+        "required": ["scheme", "value"],
+        "additionalProperties": false
+      },
+      "examples": [[{"scheme": "lei", "value": "5493001KJTIIGC8Y1R12", "issuingAuthority": "GLEIF"}, {"scheme": "national_registration", "value": "76.123.456-7", "issuingAuthority": "Servicio de Impuestos Internos", "country": "CL"}]]
+    },
     "website": {
       "type": "string",
       "format": "uri",

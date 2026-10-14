@@ -57,7 +57,7 @@ The `TraceableUnit` object represents the fundamental unit of traceability in th
 <td>`secondaryIdentifiers`
 <td>array&lt;object&gt;
 <td>No
-<td>Secondary/backup identification methods with confidence scores
+<td>Secondary/backup identification methods with confidence scores (identifierType also accepts document and logistics identifiers: dispatch_note, lot_number, bundle, container, sscc, production_order, gtin)
 <td>`[{"identifierType": "rfid", "identifierValue": "TAG-001", "confidence": 90}]`
 </tr>
 <tr>
@@ -215,6 +215,13 @@ The `TraceableUnit` object represents the fundamental unit of traceability in th
 <td>`2025-07-21T15:45:00Z`
 </tr>
 </tbody>
+<tr>
+<td>`volumeBasis`
+<td>string
+<td>No
+<td>Basis on which totalVolumeM3 was measured (enum: solid_under_bark, solid_over_bark, stacked, green_weight, dry_weight, bone_dry)
+<td>`solid_under_bark`
+</tr>
 </table>
 ---
 

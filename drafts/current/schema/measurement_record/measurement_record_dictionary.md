@@ -131,6 +131,13 @@ The `MeasurementRecord` entity captures measurements at different tracking point
 <td>`2025-07-21T15:45:00Z`
 </tr>
 </tbody>
+<tr>
+<td>`volumeBasis`
+<td>string
+<td>No
+<td>Basis on which measuredVolume was taken (enum: solid_under_bark, solid_over_bark, stacked, green_weight, dry_weight, bone_dry)
+<td>`solid_over_bark`
+</tr>
 </table>
 ### Measurement Methods
 

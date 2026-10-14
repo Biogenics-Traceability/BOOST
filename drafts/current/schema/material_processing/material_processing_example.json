@@ -13,6 +13,8 @@
     "inputVolume": "https://github.com/Biogenics-Traceability/BOOST/schemas#inputVolume",
     "outputVolume": "https://github.com/Biogenics-Traceability/BOOST/schemas#outputVolume",
     "volumeLoss": "https://github.com/Biogenics-Traceability/BOOST/schemas#volumeLoss",
+    "conversionBasis": "https://github.com/Biogenics-Traceability/BOOST/schemas#conversionBasis",
+    "conversionFactor": "https://github.com/Biogenics-Traceability/BOOST/schemas#conversionFactor",
     "qualityMetrics": "https://github.com/Biogenics-Traceability/BOOST/schemas#qualityMetrics",
     "equipmentUsed": "https://github.com/Biogenics-Traceability/BOOST/schemas#equipmentUsed",
     "lastUpdated": "https://github.com/Biogenics-Traceability/BOOST/schemas#lastUpdated",
@@ -32,6 +34,8 @@
   "inputVolume": 25.5,
   "outputVolume": 24.2,
   "volumeLoss": 1.3,
+  "conversionFactor": 0.985,
+  "conversionBasis": "m3 solid under bark input to m3 solid under bark output",
   "qualityMetrics": "Grade A: 16.8 m³ (70%), Grade B: 7.4 m³ (30%), Defects: minimal knots",
   "equipmentUsed": "harvester_head",
   "inputPlantParts": {

@@ -96,6 +96,13 @@ The `GeographicData` entity provides comprehensive spatial data support for the 
 <td>`https://github.com/Biogenics-Traceability/BOOST/schemas/geographic-data/GEO-001`
 </tr>
 </tbody>
+<tr>
+<td>`plotIdentifiers`
+<td>array
+<td>No
+<td>Identifiers under which the area is known to an external registry: objects with scheme (fao_geoid, national_cadastre, forest_management_unit, permit_area, other), value, registry
+<td>`[{"scheme": "fao_geoid", "value": "...", "registry": "FAO AgStack asset registry"}]`
+</tr>
 </table>
 ---
 

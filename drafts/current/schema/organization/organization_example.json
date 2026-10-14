@@ -11,6 +11,7 @@
     "certifications": "https://github.com/Biogenics-Traceability/BOOST/schemas#certifications",
     "establishedDate": "https://github.com/Biogenics-Traceability/BOOST/schemas#establishedDate",
     "taxId": "https://github.com/Biogenics-Traceability/BOOST/schemas#taxId",
+    "identifiers": "https://github.com/Biogenics-Traceability/BOOST/schemas#identifiers",
     "website": "https://github.com/Biogenics-Traceability/BOOST/schemas#website",
     "lastUpdated": "https://github.com/Biogenics-Traceability/BOOST/schemas#lastUpdated",
     "id": "@id"
@@ -36,6 +37,10 @@
   ],
   "establishedDate": "1985-06-15",
   "taxId": "93-1234567",
+  "identifiers": [
+    {"scheme": "lei", "value": "5493001KJTIIGC8Y1R12", "issuingAuthority": "GLEIF"},
+    {"scheme": "gln", "value": "0614141000005", "issuingAuthority": "GS1 US", "country": "US"}
+  ],
   "website": "https://www.pacificforest.com",
   "lastUpdated": "2025-07-21T17:00:00Z"
 }
