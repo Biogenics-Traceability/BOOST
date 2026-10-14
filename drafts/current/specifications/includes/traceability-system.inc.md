@@ -25,4 +25,6 @@ MaterialProcessing entities provide comprehensive audit trails by:
 - Linking input TRUs to output TRUs for every transformation
 - Tracking plant part changes and transformations during processing
 - Validating volume and mass conservation across processing steps
-- Supporting split and merge operations with complete genealogy tracking
+- Supporting split and merge operations with complete lineage tracking
+
+**Lineage.** Lineage is the record of which TraceableUnits an output TraceableUnit was split from or merged from. Each MaterialProcessing record links its input TRUs to its output TRUs, and following those links from a finished unit back to harvest gives its lineage. Lineage is held at the level of units, not of individual kilograms: when units merge, the output's lineage lists every input, and volume and mass conservation checks bound the quantities, but the specification does not attribute each kilogram of the output to a particular input. Claims are allocated across a split by percentage (see ProcessingHistory). Transport does not change lineage: a unit that moves keeps its identifier, and its movements are recorded in LocationHistory.

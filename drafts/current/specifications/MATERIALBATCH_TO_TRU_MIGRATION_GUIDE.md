@@ -109,7 +109,7 @@ This guide describes the conceptual changes when migrating from the MaterialBatc
 - **Plant part transformations** tracking changes in plant components during processing
 - **Volume conservation** validation with reconciliation procedures
 - **Quality transformation** documentation through processing chain
-- **Split/merge operations** with proper TRU genealogy tracking
+- **Split/merge operations** with proper TRU lineage tracking
 
 ### Transportation
 - **Location history** documentation for all TRU movements

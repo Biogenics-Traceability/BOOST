@@ -19,7 +19,7 @@ The TraceableUnits (TRUs) entity is the central organizing concept of the entire
 
 - **Harvest Level**: Individual logs, piles, or volume aggregations become initial TRUs with appropriate identification methods
 - **Transport Level**: TRUs move through critical tracking points (harvest\_site $\rightarrow$ skid\_road $\rightarrow$ forest\_road $\rightarrow$ mill\_entrance) while maintaining identity
-- **Processing Level**: Input TRUs are transformed into output TRUs with complete genealogical linkage
+- **Processing Level**: Input TRUs are transformed into output TRUs with complete lineage linkage
 - **Compliance Level**: TRU data aggregates automatically generate required documentation for multiple regulatory programs
 
 ### **Physical Reality Mapping**

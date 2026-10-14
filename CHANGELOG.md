@@ -9,6 +9,7 @@ All notable changes to the BOOST specification are documented in this file.
 
 ### Changed
 - **Specification terminology (W3C Community Group naming)**: Renamed "Biomass Open Origin Standard for Tracking" to "Biomass Open Origin Specification for Tracking" to match the W3C group name, and replaced "standard" with "specification" where it describes BOOST itself — spec title and abstract, README, CONTRIBUTING, charter, release workflow names, spec narrative sources and generated outputs, and the Python reference implementation docs. W3C Community Groups publish specifications, not standards. Generic references to external standards (LCFS, FSC, calibration, ISO) are unchanged, as are historical meeting notes and prior changelog entries.
+- **"Genealogy" replaced by "lineage" (Issue #251)**: the parent/child links between TraceableUnits through split and merge are now called lineage throughout the specification, dictionaries and supporting documents, and the Traceability System section defines the term: unit-level links recorded by MaterialProcessing, not per-kilogram attribution; unchanged by transport, which LocationHistory records. Wording only; no schema change.
 
 ## [3.4.2] - 2025-08-23 - Critical Tracking Points and Python Validation Enhancement
 

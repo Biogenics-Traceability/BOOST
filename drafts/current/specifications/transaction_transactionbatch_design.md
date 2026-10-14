@@ -151,7 +151,7 @@ erDiagram
 - ✅ Plant part composition and categorization
 
 **Traceability and Processing**:
-- ✅ TraceableUnit references and genealogy
+- ✅ TraceableUnit references and lineage
 - ✅ Complete processing history and transformations
 - ✅ Location tracking and movement documentation
 - ✅ Equipment and operator accountability
@@ -264,7 +264,7 @@ The separated model enhances BOOST traceability system compliance:
 - Compliance requirements enforce media-break prevention
 
 **TransactionBatch Level**:
-- Direct integration with TraceableUnit genealogy
+- Direct integration with TraceableUnit lineage
 - ProcessingHistory references maintain complete audit trails
 - Media break detection flags enable immediate response
 
