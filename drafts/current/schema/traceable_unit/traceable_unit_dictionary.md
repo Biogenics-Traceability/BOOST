@@ -367,7 +367,7 @@ The `alternativeFateMetrics` object provides data for LCA and BECCS alternative 
      Measurement reconciliation through DataReconciliation entity
 
 5. **Split/Merge Operations**
-     Parent/child relationships for TRU genealogy
+     Parent/child relationships for TRU lineage
      Volume conservation validation
      Claim inheritance tracking
 

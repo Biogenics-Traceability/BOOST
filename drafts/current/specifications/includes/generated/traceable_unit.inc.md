@@ -555,7 +555,7 @@ The `alternativeFateMetrics` object provides data for LCA and BECCS alternative 
      Location history through LocationHistory entity
      Measurement reconciliation through DataReconciliation entity
 5. **Split/Merge Operations**
-     Parent/child relationships for TRU genealogy
+     Parent/child relationships for TRU lineage
      Volume conservation validation
      Claim inheritance tracking
 ### Identification Method Selection Guidelines

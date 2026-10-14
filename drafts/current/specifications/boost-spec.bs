@@ -369,7 +369,7 @@ path: schema/material_processing/material_processing_dictionary.md
 
 ### ProcessingHistory ### {#processing-history}
 
-Chronological tracking of all processing operations affecting [[#traceable-unit|TraceableUnit]] entities throughout their lifecycle. Complements [[#material-processing|MaterialProcessing]] with TRU-centric audit trails and genealogy tracking.
+Chronological tracking of all processing operations affecting [[#traceable-unit|TraceableUnit]] entities throughout their lifecycle. Complements [[#material-processing|MaterialProcessing]] with TRU-centric audit trails and lineage tracking.
 
 **🗂️ [View ProcessingHistory in ERD Navigator](erd-navigator/index.html?focus=ProcessingHistory)**
 
