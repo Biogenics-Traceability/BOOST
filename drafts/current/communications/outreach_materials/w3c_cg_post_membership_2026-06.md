@@ -1,15 +1,15 @@
 # W3C Community Group Site Post — Membership Call, June 2026
 
-**Status:** DRAFT — Pete posts via the W3C CG announcement interface
+**Status:** DRAFT — not posted. Terminology updated 2026-10-14 (#311); the body is as of June 2026 and needs a content refresh before posting.
 **Target:** https://www.w3.org/community/boost-01/ (group announcements; also mirrors to mailing list)
 
 ---
 
 ## BOOST is moving from specification to use — new participants welcome
 
-The BOOST data standard (v3.4.2) now covers the full chain-of-custody data model — 36 entities defined in JSON Schema, with a Python reference implementation and validation tooling.
+The BOOST specification (v3.4.2) now covers the full chain-of-custody data model — 36 entities defined in JSON Schema, with a Python reference implementation and validation tooling.
 
-This year the standard is being put to work. A California interagency effort is underway with state agencies including the Air Resources Board, the Public Utilities Commission, CAL FIRE, and the Department of Conservation, and a validation tool built on the BOOST schema is moving into real-world testing on Low Carbon Fuel Standard and BioRAM pathway data. Separately, WWF-US is benchmarking BOOST against its Global Traceability Framework for Timber, mapping BOOST entities to that framework's critical tracking events and key data elements.
+This year the specification is being put to work. A California interagency effort is underway with state agencies including the Air Resources Board, the Public Utilities Commission, CAL FIRE, and the Department of Conservation, and a validation tool built on the BOOST schema is moving into real-world testing on Low Carbon Fuel Standard and BioRAM pathway data. Separately, WWF-US is benchmarking BOOST against its Global Traceability Framework for Timber, mapping BOOST entities to that framework's critical tracking events and key data elements.
 
 The decisions ahead — extensions for wood products and fiber, regulatory crosswalks, validation rules that match field reality — need practitioners: supply chain operators, certification auditors, agency staff, software developers, and researchers.
 

@@ -1,6 +1,6 @@
 # BOOST Charter Amendment — WG Announcement Email
 
-**Status:** DRAFT — Pete sends via mu4e after confirming the meeting date
+**Status:** SUPERSEDED, never sent. The vote call went to the list on 2026-10-14 (vote in #332, text in PR #300). Kept as a record; do not send.
 **To:** public-boost-01@w3.org
 **Subject:** Proposed charter amendment (timber & forest fiber) — review now, vote opens June 25
 
