@@ -10,6 +10,7 @@ on:
       - '.github/workflows/**'
       - 'CHANGELOG.md'
       - 'erd-navigator/**'
+      - 'publications/**'
 
   # Allow manual triggering
   workflow_dispatch:
@@ -459,6 +460,14 @@ jobs:
             echo "✅ Copied PDF documentation"
           fi
           
+          # Copy published guides and reports (PDFs checked into publications/)
+          if [ -d "publications" ]; then
+            mkdir -p ./pages-content/publications
+            cp publications/*.pdf ./pages-content/publications/ 2>/dev/null || true
+            cp publications/README.md ./pages-content/publications/ 2>/dev/null || true
+            echo "✅ Copied publications/"
+          fi
+
           # Copy schema files (for direct access to individual schema files)
           if [ -d "build-output/schema" ]; then
             cp -r build-output/schema ./pages-content/
@@ -621,6 +630,7 @@ jobs:
           # Add other download links
           cat >> ./pages-content/index.html << EOF
                   <a href="./erd-navigator/">🔍 ERD Navigator</a>
+                  <a href="./publications/BOOST_Plain_Language_Guide_v1.1.1.pdf">📘 Plain-Language Guide (PDF)</a>
                   <a href="https://github.com/Biogenics-Traceability/BOOST/tree/main/drafts/current/schema">📋 JSON Schemas</a>
                   <a href="https://github.com/Biogenics-Traceability/BOOST/issues?q=label%3Aplan">✅ Enhancement Planning</a>
               </div>
